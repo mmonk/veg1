@@ -1,0 +1,99 @@
+﻿@model IEnumerable<veg1.Models.Share>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Share</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MainIngredient)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredient9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MyProperty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Directions)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainIngredient)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredient9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MyProperty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Directions)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SearchID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SearchID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SearchID })
+        </td>
+    </tr>
+}
+
+</table>

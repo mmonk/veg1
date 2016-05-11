@@ -1,0 +1,27 @@
+﻿@model IEnumerable<veg1.Models.Search>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Search</h2>
+
+<p style="color:black;">
+    Search is coming soon but currently unavailable
+</p>
+<table class="table">
+    <tr>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SearchID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SearchID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SearchID })
+        </td>
+    </tr>
+}
+
+</table>

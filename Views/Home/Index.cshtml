@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Vegan Recipe Share</h1>
+    <p class="lead">Vegan recipe is a place for you to find vegan alternatives for some of your favorite dishes. &nbsp;Please feel free to search our recipes and if you think you have one worth sharing Please do.&nbsp;</p>
+    <p style="text-align: center;"><a href="../Recipes/Search" class="btn btn-primary btn-lg">Search &raquo;</a> <a href="../Recipes" class="btn btn-primary btn-lg">Share &raquo;</a></p>
+    <p style="text-align: center;">
+        <button style="text-align: center;" class="btn btn-primary btn-lg" id="search">Random Recipe</button>
+
+    </p>
+
+</div>
+
+
+
+<div style="background-color:green; color:white;" id="show" hidden>
+    <table>
+        <tr>
+            <b>Recipe:</b> <p id="Recipe"></p>
+        </tr>
+        <tr>
+            <b>Ingredients:</b> <p id="Ingredients"></p>
+</tr>
+        <tr>
+            <b>Instructions:</b> <p id="Instructions"></p>
+</tr>
+    </table>
+</div>
+
+<script>
+
+
+    $('#search').click(function () {
+        $.ajax({
+            url: "/Home/AnotherTest",
+            datatype: "JSON",
+            type: "POST",
+            data: { data: $('#search').val },
+            success: function (data) {
+
+
+                test = JSON.parse(data);
+
+                $('#Recipe').html(test.RecipeName);
+                $('#Ingredients').html(test.Ingredients);
+                $('#Instructions').html(test.RecipeInstructions);
+
+                console.log(test);
+                $("#show").show();
+
+            },
+            error: function () {
+                console.log('we errored')
+            }
+        });
+    });
+</script>

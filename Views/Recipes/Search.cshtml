@@ -1,0 +1,52 @@
+﻿@model IEnumerable<veg1.Models.Recipe>
+
+
+
+<h2>Recipe Search</h2>
+<div style="background-color:forestgreen; opacity:0.5;">
+    <p style="color:white; font-size:xx-large;opacity:1; ">
+        Enter the name of a dish or ingredient you are looking for!
+    </p>
+</div>
+<p>
+
+    @using (Html.BeginForm())
+    {
+    <p style="font-size:xx-large; color:Black;">
+        @Html.TextBox("SearchString") 
+        <input type="submit" value="Search" style="color:forestgreen;"/>
+    </p>
+    }
+    
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RecipeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredients)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecipeInstructions)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecipeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredients)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecipeInstructions)
+        </td>
+        
+    </tr>
+}
+
+</table>

@@ -1,0 +1,114 @@
+﻿@model veg1.Models.Share
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Share</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MainIngredient)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MainIngredient)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient6)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient6)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient7)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient7)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient8)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient8)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredient9)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredient9)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MyProperty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MyProperty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Directions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Directions)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SearchID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

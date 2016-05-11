@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:matthewmonk.database.windows.net,1433;Database=matthewmonk;User ID=mrmonkcjs@matthewmonk;Password=Matttm1021;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="c:\\users\\mdt\\documents\\visual\ studio\ 2015\\Projects\\veg1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="veg1Context-Web.config Connection String" description="veg1Context Connection String used in web.config by the application to access the database." defaultValue="Server=tcp:matthewmonk.database.windows.net,1433;Database=matthewmonk;User ID=mrmonkcjs@matthewmonk;Password=Matttm1021;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="c:\\users\\mdt\\documents\\visual\ studio\ 2015\\Projects\\veg1\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='veg1Context']/@connectionString" />
+  </parameter>
+</parameters>

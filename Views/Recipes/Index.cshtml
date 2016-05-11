@@ -1,0 +1,51 @@
+﻿@model IEnumerable<veg1.Models.Recipe>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Share</h2>
+
+<p>
+    <button style="font-size:xx-large">
+        @Html.ActionLink("Create New", "Create")
+    </button>
+    
+  
+    
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RecipeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ingredients)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecipeInstructions)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecipeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ingredients)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecipeInstructions)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RecipeID }) <br />
+            @Html.ActionLink("Details", "Details", new { id=item.RecipeID }) <br />
+            @Html.ActionLink("Delete", "Delete", new { id=item.RecipeID })
+        </td>
+    </tr>
+}
+
+</table>
