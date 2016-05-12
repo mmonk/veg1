@@ -33,6 +33,13 @@ namespace veg1.Controllers
         
         public ActionResult Search(string searchString)
         {
+            var Recipes = GetRecipes(searchString);
+
+            return View(Recipes);
+        }
+
+        public IQueryable<Recipe> GetRecipes(string searchString)
+        {
             var Recipes = from m in db.Recipes
                           select m;
 
@@ -40,8 +47,7 @@ namespace veg1.Controllers
             {
                 Recipes = Recipes.Where(s => s.RecipeName.Contains(searchString));
             }
-
-            return View(Recipes);
+            return Recipes;
         }
 
         // GET: Recipes/Details/5
@@ -153,6 +159,11 @@ namespace veg1.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+
+        public int add(int one, int two) {
+            return one + two;
         }
     }
 }
